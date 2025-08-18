@@ -1,5 +1,6 @@
 
-Code for the paper "**Antibiotic resistance selection and deselection in municipal wastewater from 47 countries**"
+Code for the paper "**Antibiotic resistance selection and deselection in municipal wastewater from 47 countries**".
+
 Once the manuscript has been published, a link to it will be published here.
 
 The code for the core statistical analysis of the paper is available in *core_statistical_analysis.R*.
