@@ -30,7 +30,7 @@ All Required R packages can be installed from CRAN (https://cran.r-project.org/)
 Data must be downloaded along with the scripts, and the path to the data updated as appropriate in the R script prior to running. 
 Similarly, the path to where outputs are to be stored can be adapted in the script, if need be.
 
-Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript, denoted 
+Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript. 
 The expected outputs can be found in Supplementary Tables 1,2 and 3 of the submitted manuscript, containing 
 *Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
 *Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
@@ -38,7 +38,7 @@ The expected outputs can be found in Supplementary Tables 1,2 and 3 of the submi
 
 After the paper has been published,
 the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
-the expected outputs will be provided under outputs/<<output_files>> 
+the expected outputs will be provided under outputs/
 This in order to make it easier to rerun and reproduce the results. 
 
 
