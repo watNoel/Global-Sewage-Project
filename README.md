@@ -1,10 +1,12 @@
 
 Code for the paper "**Antibiotic resistance selection and deselection in municipal wastewater from 47 countries**"
+Once the manuscript has been published, a link to it will be published here.
 
 The code for the core statistical analysis of the paper is available in *core_statistical_analysis.R*.
+
 1. System requirements
 
-The scripts require R, and have been tested using R version 4.4.0 on a Windows 11 x64 laptop with 32 GB RAM.
+The script requires R, and has been tested using R version 4.4.0 on a Windows 11 x64 laptop with 32 GB RAM.
 The expected run time on such a laptop is short, less than one minute.
 All Required R packages can be installed from CRAN (https://cran.r-project.org/), and the versions in use are as follows:
 
@@ -27,14 +29,17 @@ All Required R packages can be installed from CRAN (https://cran.r-project.org/)
 
 3. Demo/Instructions for use
 
-Data must be downloaded along with the scripts, and the path to the data updated as appropriate in the R script prior to running. 
+Data must be downloaded along with the scripts, and the path to the input data updated as appropriate in the R script prior to running. 
 Similarly, the path to where outputs are to be stored can be adapted in the script, if need be.
 
 Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript. 
-The expected outputs can be found in Supplementary Tables 1,2 and 3 of the submitted manuscript, containing 
-*Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
-*Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
-*Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
+The expected outputs can be found in the Supplementary data of the submitted manuscript, specifically
+
+ Supplementary Table 1: *Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
+
+ Supplementary Table 2: *Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
+
+ Supplementary Tables 3: *Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
 
 After the paper has been published,
 the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
