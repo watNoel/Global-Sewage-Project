@@ -31,7 +31,7 @@ All Required R packages can be installed from CRAN (https://cran.r-project.org/)
 3. Demo/Instructions for use
 
 Data must be downloaded along with the scripts, and the path to the input data updated as appropriate in the R script prior to running. 
-Similarly, the path to where outputs are to be stored can be adapted in the script, if need be.
+The path to where outputs are to be stored can also be adapted in the script.
 
 Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript. 
 The expected outputs can be found in the Supplementary data of the submitted manuscript, under
@@ -42,15 +42,13 @@ The expected outputs can be found in the Supplementary data of the submitted man
 
  * Supplementary Tables 3: *Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
 
-After the paper has been published,
-the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
-the expected outputs will be provided under outputs/
-
-
-
 The functionality of the code is highly specific to the input format of the provided data, and it was not intended to be more generally applicable. 
 If you would want to apply the statistical analysis framework presented on your own data, a suggestion is to look at the format of the data going into the function "counts_modeller" and adapt your input data accordingly.
 
+
+After the paper has been published,
+the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
+the expected outputs will be provided under outputs/
 
 In addition to the script for the core analysis, a script for calculating 1% MICs for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
 Example data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output based on this example data is in *output/mic_1percent_ecoli.xlsx*.
