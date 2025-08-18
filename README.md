@@ -36,16 +36,16 @@ Similarly, the path to where outputs are to be stored can be adapted in the scri
 Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript. 
 The expected outputs can be found in the Supplementary data of the submitted manuscript, specifically
 
- Supplementary Table 1: *Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
+ * Supplementary Table 1: *Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
 
- Supplementary Table 2: *Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
+ * Supplementary Table 2: *Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
 
- Supplementary Tables 3: *Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
+ * Supplementary Tables 3: *Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
 
 After the paper has been published,
 the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
 the expected outputs will be provided under outputs/
-This in order to make it easier to rerun and reproduce the results. 
+
 
 
 The functionality of the code is highly specific to the input format of the provided data, and it was not intended to be more generally applicable. 
