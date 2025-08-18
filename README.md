@@ -46,5 +46,5 @@ The functionality of the code is highly specific to the input format of the prov
 If you would want to apply the statistical analysis framework presented on your own data, a suggestion is to look at the format of the data going into the function "counts_modeller" and adapt your input data accordingly.
 
 
-In addition to the script for the core analysis, a script for calculating 1% mics for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
-Data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output in *output/mic_1percent_ecoli.xlsx*.
+In addition to the script for the core analysis, a script for calculating 1% MICs for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
+Example data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output based on this example data is in *output/mic_1percent_ecoli.xlsx*.
