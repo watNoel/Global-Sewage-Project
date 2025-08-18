@@ -34,7 +34,7 @@ Data must be downloaded along with the scripts, and the path to the input data u
 Similarly, the path to where outputs are to be stored can be adapted in the script, if need be.
 
 Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript. 
-The expected outputs can be found in the Supplementary data of the submitted manuscript, specifically
+The expected outputs can be found in the Supplementary data of the submitted manuscript, under
 
  * Supplementary Table 1: *Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
 
