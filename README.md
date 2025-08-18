@@ -21,27 +21,30 @@ All Required R packages can be installed from CRAN (https://cran.r-project.org/)
 
 2. Installation guide
    
-The packages and versions in use can be installed with install.packages("<<packagename>>","version") for all packages, e.g install.packages("MASS",version="7.3.60.2").
+  Packages and versions in use can be installed with install.packages("<<packagename>>","version") for all packages, e.g install.packages("MASS",version="7.3.60.2").
 
-Expected install time of the packages on a "normal" desktop computer is about 30 minutes, with the majority of time spent on installing tidyverse.  
+  Expected install time of the packages on a "normal" desktop computer is about 30 minutes, with the majority of time spent on installing tidyverse.  
 
-4. Demo/Instructions for use
+3. Demo/Instructions for use
 
 Data must be downloaded along with the scripts, and the path to the data updated as appropriate in the R script prior to running. 
-Similarly, the path to where outputs are to be stored can be adapted in the end of the script, if need be.
+Similarly, the path to where outputs are to be stored can be adapted in the script, if need be.
 
-Input data for the script can be found in supplementary table 17 and supplementary table 18 of the submitted manuscript.
-The expected outputs can be found in supplementary tables 1,2 and 3 of the submitted manuscript. 
+Input data for the script can be found in Supplementary Table 17: *Source data (CFU/mL reads on plates) for the synthetic E. coli community assay*,  and Supplementary Table 18: *Source data (CFU/mL reads on plates) for the natural wastewater community assay* of the submitted manuscript, denoted 
+The expected outputs can be found in Supplementary Tables 1,2 and 3 of the submitted manuscript, containing 
+*Comprehensive statistics for the synthetic E. coli community assay (saline, 0-hour reference)*	,	
+*Comprehensive statistics for the synthetic E. coli community assay (saline, 72-hour reference)* and		
+*Comprehensive statistics for the natural wastewater community assay (saline, 0-hour reference)* respectively.								
 
-
-The raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* after the paper has been published.
-The expected outputs with the provided input data will be provided under outputs/<<output_files>> after the paper has been published.
+After the paper has been published,
+the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
+the expected outputs will be provided under outputs/<<output_files>> 
 This in order to make it easier to rerun and reproduce the results. 
-
 
 
 The functionality of the code is highly specific to the input format of the provided data, and it was not intended to be more generally applicable. 
 If you would want to apply the statistical analysis framework presented on your own data, a suggestion is to look at the format of the data going into the function "counts_modeller" and adapt your input data accordingly.
+
 
 In addition to the script for the core analysis, a script for calculating 1% mics for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
 Data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output in *output/mic_1percent_ecoli.xlsx*.
