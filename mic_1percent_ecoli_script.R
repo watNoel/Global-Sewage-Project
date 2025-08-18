@@ -2,15 +2,20 @@
 # Purpose: Calculate 1% MICs for E. coli based on EUCAST data.
 # Algorithm inspired by :Bengtsson-Palme et al 2016 (Concentrations of antibiotics predicted to select for resistant bacteria: Proposed limits for environmental regulation)
 
+
+# Essentially, it calculates the 1% mic of the wilt-type strains, but also considers that there needs to be at least 10 observations with a lower-or equal that MIC than the MIC selected to represent the 1% mic.
+
 library(tidyverse)
 
 
 # 1. Load example MIC data from EUCAST - modify the data path as needed but note the required format of the input file from the example.
-
-data_path <- "../../Global_Sewage_Project_Zhuo/EUCAST_data_20240513.xlsx"
-
 # Read MIC histogram data
+
+data_path<- "data/example_eucast_ecoli_mic_data.xlsx"
 eucast_mics <- readxl::read_xlsx(path = data_path, sheet = "Sheet1", range = "A1:T86")
+
+
+
 
 # Transpose and clean
 t_eucast_mics <- data.frame(t(eucast_mics[, -1]))
@@ -22,10 +27,10 @@ eucast_mics <- t_eucast_mics |>
 rm(t_eucast_mics)
 
 # Read ECOFF values
-eucast_eccofs <- readxl::read_xlsx(path = data_path, sheet = "Sheet1", range = "A1:X86")[, c(1, 23)]
+  eucast_eccofs <- readxl::read_xlsx(path = data_path, sheet = "Sheet1", range = "A1:X86")[, c(1, 23)]
 
 # Ensure concentration column is numeric
-eucast_mics$Antibiotic_Conc <- as.numeric(eucast_mics$Antibiotic_Conc)
+  eucast_mics$Antibiotic_Conc <- as.numeric(eucast_mics$Antibiotic_Conc)
 
 # 2. Filter MICs above ECOFF (keep wild-type only)
 {
@@ -50,7 +55,8 @@ eucast_mics$Antibiotic_Conc <- as.numeric(eucast_mics$Antibiotic_Conc)
 }
 rm(as_numeric_euec, eucast_eccof, colname)
 
-# 3. Determine MIC level with at least 10 observations
+
+# 3. Determine MIC level with at least 10 observations lower than or equal to this level 
 {
   quantlst <- list()
   tmpidx <- 0
@@ -75,9 +81,9 @@ rm(as_numeric_euec, eucast_eccof, colname)
 }
 rm(quantlst, row, tmpidx, tmpsum, colname, min10)
 
-# 4. Calculate MIC quantiles (1%, 10%, 50%)
+# 4. Calculate MIC quantiles (1%, 10%, 50%), only 1% is needed for the output.
 {
-  mic100lst <- list()
+mic100lst <- list()
   
   for (colname in colnames(eucast_mic_wt)[-1]) {
     count_version <- eucast_mic_wt |>
@@ -92,20 +98,21 @@ rm(quantlst, row, tmpidx, tmpsum, colname, min10)
     )
   }
   
+  
   mic100df <- do.call(rbind, mic100lst)
-}
+  rm(mic100lst,count_version)
+  }
 
-# 5. Merge quantile and observation threshold data
-merged_quantmic <- merge(tenthobsdf, mic100df, by = "Antibiotic") |>
+# 5. Merge quantile and observation threshold data, and select the 10th lowest value as mic1percent if this value is higher than the 1% mic ( mic100).
+
+merged_min10_and_mic <- merge(tenthobsdf, mic100df, by = "Antibiotic") |>
   mutate(mic1perc = ifelse(min10 > mic100, min10, mic100))
 
 
 
-# Final output, a data frame of antibiotic and 1% MIC
-mic_ecoli<-merged_quantmic |> dplyr::select(Antibiotic,mic1perc)
+# Final output, a data frame of antibiotic and estimated 1% MIC
+mic_ecoli<-merged_min10_and_mic |> dplyr::select(Antibiotic,mic1perc)
 
-
-writexl::write_xlsx(mic_ecoli, "data_github/mic_1percent_ecoli.xlsx")
-
+writexl::write_xlsx(mic_ecoli, "output/mic_1percent_ecoli.xlsx")
 
 
