@@ -57,6 +57,6 @@ Example data used as input for the script is in *data/example_eucast_ecoli_mic_d
 4. In addition to code for the core statistical analysis, a python script for obtaining the biocide and antibotic resistance gene counts use din the paper, from data published by Martiny et al in "Geographics and bacterial networks shape the global urban sewage resistome", https://github.com/genomicepidemiology/gs3_acquired_vs_FG, <<DOI and reference to be addded once paper is published>>
    is made available under metagenomics/Data_Overview. The script draws data uploaded to Zenodo at https://zenodo.org/records/14652833.
 The system requirements are  Python 3.12 Pandas 2.3.2, both installable via e.g pip install. To run the code, one will also need to download GS3_Supplementary_Data.xlsx from the Supplementary Data 1 of the paper << add DOI once available>> , and the GSP_Sample_Sheet.xlsx available in this repository under metagenomics/
-The expected outputs of this code are uploaded under metagenomics/ GSP_samples_data.xlsx, biocide_class_counts.xlsx, biocide_gene_counts.xlsx, resfinder_class_counts.xlsx, resfinder_class_fragment_counts.xlsx ,  resfinder_gene_counts.xlsx
+The expected outputs of this code are uploaded under metagenomics/ GSP_samples_data.xlsx, biocide_class_counts.xlsx, biocide_gene_counts.xlsx, resfinder_class_counts.xlsx, resfinder_class_fragment_counts.xlsx and resfinder_gene_counts.xlsx
 
 
