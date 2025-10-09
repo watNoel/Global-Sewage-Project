@@ -52,3 +52,11 @@ the expected outputs will be provided under outputs/
 
 In addition to the script for the core analysis, a script for calculating 1% MICs for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
 Example data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output based on this example data is in *output/mic_1percent_ecoli.xlsx*.
+
+
+4. In addition to code for the core statistical analysis, a python script for obtaining the biocide and antibotic resistance gene counts from data published by Martiny et al << DOI and reference will be made avalable once the paper is published>>
+    is made available under metagenomics/Data_Overview. The script draws data uploaded to Zenodo at https://zenodo.org/records/14652833 and subsets it.
+   The system requirements are  Python 3.12 Pandas 2.3.2, both installable via e.g Anaconda. To run the code, one will also need to download GS3_Supplementary_Data.xlsx from the Supplementary Data 1 of the paper.
+   The expected outputs of this code are uploaded under metagenomics/
+
+
