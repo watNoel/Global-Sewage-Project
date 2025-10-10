@@ -55,7 +55,7 @@ Example data used as input for the script is in *data/example_eucast_ecoli_mic_d
 
 
 4.
-In addition to R code for the core statistical analysis, a Python script for obtaining the biocide and antibotic resistance class/gene counts used in the publication, from data published by Martiny et al in "Geographics and bacterial networks shape the global urban sewage resistome", https://github.com/genomicepidemiology/gs3_acquired_vs_FG, <<DOI and reference to be addded once paper is published>>
+In addition to R code for the core statistical analysis, a Python script for obtaining the biocide and antibotic resistance class/gene counts used in the publication, from data published by Martiny et al in "Geographics and bacterial networks shape the global urban sewage resistome", https://github.com/genomicepidemiology/gs3_acquired_vs_FG, << DOI and reference to the paper will be addded once published >>
    is made available under metagenomics/Data_Overview. The script draws data uploaded to Zenodo at https://zenodo.org/records/14652833.
 The system requirements are:
 * Python 3.12
