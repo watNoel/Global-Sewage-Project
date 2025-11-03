@@ -1,7 +1,6 @@
 
 Code for the paper "**Antibiotic resistance selection and deselection in municipal wastewater from 47 countries**".
-
-Once the manuscript has been published, a link to it will be published here.
+To be found at: https://www.nature.com/articles/s41467-025-65670-7
 
 The code for the core statistical analysis of the paper is available in *core_statistical_analysis.R*.
 
