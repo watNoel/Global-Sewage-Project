@@ -45,9 +45,8 @@ The functionality of the code is highly specific to the input format of the prov
 If you would want to apply the statistical analysis framework presented on your own data, a suggestion is to look at the format of the data going into the function "counts_modeller" and adapt your input data accordingly.
 
 
-After the paper has been published,
-the raw data used for this statistical analysis will be provided in *data/CFU_data.xlsx* and 
-the expected outputs will be provided under outputs/
+The raw data used for this statistical analysis is provided in *data/CFU_data.xlsx* and 
+the expected outputs are provided under output/nwc_fys0h_as_ref.xlsx, output/sec_fys0h_as_ref.xlsx and output/sec_fys72h_as_ref.xlsx.
 
 In addition to the script for the core analysis, a script for calculating 1% MICs for ecoli based on data from EUCAST is provided in *mic_1percent_ecoli_script.R*. 
 Example data used as input for the script is in *data/example_eucast_ecoli_mic_data.xlsx* and expected output based on this example data is in *output/mic_1percent_ecoli.xlsx*.
